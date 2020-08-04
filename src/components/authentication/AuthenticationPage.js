@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import AuthenticationForm from './AuthenticationForm'
 
-class AuthenticationPage extends React.Component {
+class AuthenticationPage extends Component {
 
     render() {
         return (
-            <h1>Authentication page</h1>
+            <div>
+                <h1>Authentication page</h1>
+                <AuthenticationForm />
+            </div>
         )
         
     }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import AuthenticationForm from './AuthenticationForm'
+import AuthenticationForm from './AuthenticationForm';
+import { connect } from 'react-redux';
+import { authenticate } from '../../actions/AuthenticationActions'
 
 class AuthenticationPage extends Component {
 
@@ -7,11 +9,17 @@ class AuthenticationPage extends Component {
         return (
             <div>
                 <h1>Authentication page</h1>
-                <AuthenticationForm />
+                <AuthenticationForm authenticateUser={this.props.authenticate}/>
             </div>
         )
         
     }
 }
 
-export default AuthenticationPage;
+const mapDispatchToProps = dispatch => {
+    return {
+        authenticate: data => dispatch(authenticate(data))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(AuthenticationPage);

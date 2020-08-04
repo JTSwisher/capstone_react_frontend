@@ -17,7 +17,12 @@ class AuthenticationForm extends Component {
 
     handleOnSubmit = event => {
         event.preventDefault();
-
+        this.props.authenticateUser(this.state);
+        this.setState({
+            username: '',
+            email: '',
+            password: ''
+        })
     }
 
 
@@ -26,19 +31,19 @@ class AuthenticationForm extends Component {
             <div>
                 <h1>hey</h1>
                 <form onSubmit={ (event) => this.handleOnSubmit(event)}>
-                    <label for="name">Username</label>
+                    <label htmlFor="name">Username</label>
                     <input
                         name="username"
                         value={this.state.username}
                         onChange={this.handleOnChange}
-                    />
-                    <label for="name">Email</label>
+                    /><br />
+                    <label htmlFor="name">Email</label>
                     <input
                         name="email"
                         value={this.state.email}
                         onChange={this.handleOnChange}
-                    />
-                    <label for="name">Password</label>
+                    /><br />
+                    <label htmlFor="name">Password</label>
                     <input
                         name="password"
                         value={this.state.password}

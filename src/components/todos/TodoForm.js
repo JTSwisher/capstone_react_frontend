@@ -1,0 +1,53 @@
+import React, { Component } from 'react';
+
+class TodoForm extends Component {
+
+    state = {
+        title: '',
+        body: '',
+        complete: false
+    }
+
+    handleOnChange = event => {
+        const {name, value} = event.target;
+        this.setState({
+            [name]: value
+        })
+    }
+
+    handleOnSubmit = event => {
+        event.preventDefault();
+       /// pass in action creator function
+        this.setState({
+            title: '',
+            body: ''
+        })
+    }
+
+   
+   
+
+    render() {
+        return(
+            <div>
+                <form onSubmit={ (event) => this.handleOnSubmit(event)}>
+                    <label htmlFor="name">Title</label>
+                    <input
+                        name="title"
+                        value={this.state.title}
+                        onChange={this.handleOnChange}
+                    /><br />
+                    <label htmlFor="name">Body</label>
+                    <input
+                        name="body"
+                        value={this.state.body}
+                        onChange={this.handleOnChange}
+                    /><br />
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+        )
+    }
+}
+
+export default TodoForm;

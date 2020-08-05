@@ -1,5 +1,6 @@
+import history from '../History';
+
 export const authenticate = (user) => {
-    const newUser = user
     return (dispatch) => {
         dispatch({type: "AUTHENTICATING_USER" });
         fetch("http://localhost:3001/users", {
@@ -15,6 +16,9 @@ export const authenticate = (user) => {
             const token = user.token;
             localStorage.setItem('token', token);
             dispatch({type:"USER_AUTHENTICATED", user});
+        })
+        .then(() => {
+            history.push("/home")
         })
         .catch((errors) => {
             dispatch({type:"AUTHENTICATION_ERROR", errors})

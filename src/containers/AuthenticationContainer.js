@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
-import AuthenticationForm from '../components/authentication/AuthenticationForm';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+
+
+import AuthenticationForm from '../components/authentication/AuthenticationForm';
 import { authenticate } from '../actions/AuthenticationActions'
 
+
 class AuthenticationContainer extends Component {
+
+    
 
     render() {
         return (
             <div>
-                <AuthenticationForm authenticateUser={this.props.authenticate}/>
+                <AuthenticationForm authenticateUser={this.props.authenticate} />
             </div>
         )
         
@@ -21,4 +27,6 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(AuthenticationContainer);
+const mapStateToProps = ({ current_user }) => ({ current_user })
+
+export default connect(mapStateToProps ,mapDispatchToProps)(AuthenticationContainer);

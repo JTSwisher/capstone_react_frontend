@@ -8,7 +8,7 @@ class TodoContainer extends Component {
 
 
     render() {
-        console.log(this.props.user)
+        console.log(this.props.user.id)
         return (
             <div className="todos">
                 <h1>Todo's</h1>
@@ -21,7 +21,7 @@ class TodoContainer extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        create: todo_data => dispatch(createTodo(todo_data))
+        create: (todo_data, user_id) => dispatch(createTodo(todo_data, user_id))
     }
 }
 

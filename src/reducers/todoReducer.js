@@ -5,6 +5,10 @@ const todoReducer = (state= {todos: [], requesting: false}, action) => {
             return {...state, requesting: true}
         case "TODO_ADDED":
             return {...state, todos: [...state.todos, action.todo], requesting: false}
+        case "FETCHING_TODOS":
+            return {...state, requesting: true}
+        case "RETRIEVED_TODOS":
+            return {...state, todos: [...state.todos, action.todos], requesting: false}
         default:
             return state
     }

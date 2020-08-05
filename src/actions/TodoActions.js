@@ -1,5 +1,4 @@
 export const createTodo = (todo, userId) => {
-    console.log(todo, userId)
     return (dispatch) => {
         dispatch({type: "ADDING_TODO" });
         fetch(`http://localhost:3001/users/${userId}/todos`, {
@@ -12,9 +11,19 @@ export const createTodo = (todo, userId) => {
         })
         .then(response => response.json())
         .then(todo => {
-            dispatch({type: "TODO_ADDED", todo});
-            console.log(todo)
+            dispatch({type: "TODO_CREATED", todo});
         })
     }
 
+}
+
+export const getTodos = userId => {
+    return(dispatch) => {
+        dispatch({type: "FETCHING_TODOS"});
+        fetch(`http://localhost:3001/users/${userId}/todos`)
+        .then(response => response.json())
+        .then(todos => {
+            dispatch({type: "RETRIEVED_TODOS", todos})
+        })
+    }
 }

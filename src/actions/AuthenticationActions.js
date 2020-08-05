@@ -16,6 +16,10 @@ export const authenticate = (user) => {
             localStorage.setItem('token', token);
             dispatch({type:"USER_AUTHENTICATED", user});
         })
+        .catch((errors) => {
+            dispatch({type:"AUTHENTICATION_ERROR", errors})
+            localStorage.clear()
+        })
     }
 }
 

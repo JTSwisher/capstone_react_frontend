@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import AuthenticationForm from './AuthenticationForm';
+import AuthenticationForm from '../components/authentication/AuthenticationForm';
 import { connect } from 'react-redux';
-import { authenticate } from '../../actions/AuthenticationActions'
+import { authenticate } from '../actions/AuthenticationActions'
 
-class AuthenticationPage extends Component {
+class AuthenticationContainer extends Component {
 
     render() {
         return (
@@ -21,4 +21,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(AuthenticationPage);
+export default connect(null, mapDispatchToProps)(AuthenticationContainer);

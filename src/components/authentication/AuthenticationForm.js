@@ -56,4 +56,4 @@ class AuthenticationForm extends Component {
     }
 }
 
-export default AuthenticationForm
+export default AuthenticationForm;

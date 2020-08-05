@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import AuthenticationPage from './components/authentication/AuthenticationPage'
+import AuthenticationContainer from './containers/AuthenticationContainer'
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Route exact path="/" component={AuthenticationPage} />
+        <Route exact path="/" component={AuthenticationContainer} />
       </div>
     </Router>
   );

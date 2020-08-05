@@ -8,7 +8,6 @@ class AuthenticationPage extends Component {
     render() {
         return (
             <div>
-                <h1>Authentication page</h1>
                 <AuthenticationForm authenticateUser={this.props.authenticate}/>
             </div>
         )
@@ -18,7 +17,7 @@ class AuthenticationPage extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        authenticate: data => dispatch(authenticate(data))
+        authenticate: user_data => dispatch(authenticate(user_data))
     }
 }
 

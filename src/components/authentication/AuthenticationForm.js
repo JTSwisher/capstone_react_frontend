@@ -29,7 +29,6 @@ class AuthenticationForm extends Component {
     render() {
         return(
             <div>
-                <h1>hey</h1>
                 <form onSubmit={ (event) => this.handleOnSubmit(event)}>
                     <label htmlFor="name">Username</label>
                     <input

@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import TodoForm from '../components/todos/TodoForm'
+import { createTodo } from '../actions/TodoActions'
 
 class TodoContainer extends Component {
 
-  
 
     render() {
         console.log(this.props.user)
         return (
             <div className="todos">
                 <h1>Todo's</h1>
-                <TodoForm />
+                <TodoForm createTodo={this.props.create} user={this.props.user.id}/>
             </div>
         )
         

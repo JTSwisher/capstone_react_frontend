@@ -19,7 +19,7 @@ export const authenticate = (user) => {
         })
         .then(() => {
             history.push("/home")
-        })
+         })
         .catch((errors) => {
             dispatch({type:"AUTHENTICATION_ERROR", errors})
             localStorage.clear()

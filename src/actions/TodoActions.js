@@ -1,6 +1,6 @@
 export const createTodo = (todo, userId) => {
     return (dispatch) => {
-        dispatch({type: "ADDING_TODO" });
+        dispatch({type: "CREATING_TODO" });
         fetch(`http://localhost:3001/users/${userId}/todos`, {
             method: "POST",
             headers: {
@@ -14,8 +14,7 @@ export const createTodo = (todo, userId) => {
             dispatch({type: "TODO_CREATED", todo});
         })
     }
-
-}
+};
 
 export const getTodos = userId => {
     return(dispatch) => {

@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 
 import TodoContainer from './TodoContainer'
 
+
 class HomeContainer extends Component {
 
-  
+
 
     render() {
         console.log(this.props.user)
@@ -18,6 +19,7 @@ class HomeContainer extends Component {
         
     }
 }
+
 
 const mapStateToProps = (state) => {
     return {user: state.user.current_user}

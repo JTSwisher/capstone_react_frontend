@@ -1,5 +1,4 @@
 const todoReducer = (state= {todos: [], requesting: false}, action) => {
-    console.log(action)
     switch(action.type) {
         case "CREATING_TODO":
             return {...state, todos: [...state.todos], requesting: true}
@@ -7,10 +6,16 @@ const todoReducer = (state= {todos: [], requesting: false}, action) => {
             return {...state, todos: [...state.todos, action.todo], requesting: false}
         case "FETCHING_TODOS":
             return {...state, todos: [...state.todos], requesting: true}
-        case "RETRIEVED_TODOS":
-            return {...state.todos, todos: [...state.todos].concat(action.todos), requesting: false}
+        case "TODOS_RECEIVED":
+            return {...state, todos: [...state.todos].concat(action.todos), requesting: false}
+        case "DELETING_TODO":
+            return {...state, todos: [...state.todos], requesting: true}
+        case "TODO_COMPLETED":
+            const todos = state.todos.filter(todo => todo.id !== action.id);
+            console.log("these are the todos", todos)
+            return { todos , requesting: false }
         default:
-            return state
+            return state;
     }
 }
 

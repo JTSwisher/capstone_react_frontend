@@ -22,7 +22,29 @@ export const getTodos = userId => {
         fetch(`http://localhost:3001/users/${userId}/todos`)
         .then(response => response.json())
         .then(todos => {
-            dispatch({type: "RETRIEVED_TODOS", todos})
+            dispatch({type: "TODOS_RECEIVED", todos})
         })
+    }
+};
+
+export const todoCompleted = (userId, id) => {
+    return(dispatch) => {
+        dispatch({type: "DELETING_TODO"});
+        fetch(`http://localhost:3001/users/${userId}/todos/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Accept":"application/json",
+                "Content-Type":"application/json"
+            },
+        })
+        .then(() => {
+            dispatch({type: "TODO_COMPLETED", id})
+        })
+        .then(function(){
+            alert("Todo Completed!")
+        })
+        .catch(e => {
+            console.log(e)
+        }) 
     }
 }

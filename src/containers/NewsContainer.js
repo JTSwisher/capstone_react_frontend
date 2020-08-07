@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import NewsForm from '../components/newsFeed/NewsForm'
 
 class NewsContainer extends Component {
 
@@ -17,7 +18,9 @@ class NewsContainer extends Component {
             backgroundColor: "lightcyan"
         };
         return (
-            <div style={ containerStyle }>YOU</div>
+            <div style={ containerStyle }>
+                <NewsForm />
+            </div>
         )
     }
 }

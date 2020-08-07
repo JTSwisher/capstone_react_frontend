@@ -9,9 +9,7 @@ class DisplayTodos extends Component {
         const todos = this.props.todos.map(t => <Todo key={t.id} todo={t} completed={this.props.completed} /> ) 
         return (
             <div>
-                <ul>
                 { todos } 
-                </ul>
             </div>
         )
     }

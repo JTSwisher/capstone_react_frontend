@@ -8,7 +8,7 @@ class Todo extends Component {
         const { todo } = this.props
         console.log(todo)
         return (
-            <Card style={{ width: '20rem' }}>
+            <Card style={{ width: '50rem', marginTop: "10px"}}>
                 <Card.Header><Card.Title>{todo.title}</Card.Title></Card.Header>
                 <Card.Body>
                     <Card.Text>{todo.body}</Card.Text>

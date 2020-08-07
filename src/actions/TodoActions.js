@@ -40,9 +40,6 @@ export const todoCompleted = (userId, id) => {
         .then(() => {
             dispatch({type: "TODO_COMPLETED", id})
         })
-        .then(function(){
-            alert("Todo Completed!")
-        })
         .catch(e => {
             console.log(e)
         }) 

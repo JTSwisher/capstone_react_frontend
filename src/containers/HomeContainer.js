@@ -12,7 +12,6 @@ class HomeContainer extends Component {
         console.log(this.props.user)
         return (
             <div>
-                <h1>HOME</h1>
                 <TodoContainer />
             </div>
         )

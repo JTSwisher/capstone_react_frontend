@@ -12,7 +12,6 @@ const todoReducer = (state= {todos: [], requesting: false}, action) => {
             return {...state, todos: [...state.todos], requesting: true}
         case "TODO_COMPLETED":
             const todos = state.todos.filter(todo => todo.id !== action.id);
-            console.log("these are the todos", todos)
             return { todos , requesting: false }
         default:
             return state;

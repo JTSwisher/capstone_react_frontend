@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import TodoContainer from './TodoContainer'
-
+import NewsContainer from './NewsContainer'
 
 class HomeContainer extends Component {
 
@@ -13,6 +13,7 @@ class HomeContainer extends Component {
         return (
             <div>
                 <TodoContainer />
+                <NewsContainer />
             </div>
         )
         

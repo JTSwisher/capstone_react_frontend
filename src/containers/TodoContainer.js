@@ -13,8 +13,19 @@ class TodoContainer extends Component {
     }
 
     render() {
+        const containerStyle = {
+            position: "fixed", 
+            width: '48%', 
+            border: "1px solid black", 
+            height: "100%", 
+            padding:"2%", 
+            left: "0px", 
+            textAlign: "center", 
+            backgroundColor: "lightcyan"
+        };
+
         return (
-            <div className="todos" style={{ width: '80rem', border: "1px solid black", padding:"5%" }}>
+            <div className="todos" style={ containerStyle }>
                 <h1>Todo's</h1>
                 <TodoForm createTodo={this.props.create} user={this.props.user.id}/>
                 <DisplayTodos todos={this.props.todos} />

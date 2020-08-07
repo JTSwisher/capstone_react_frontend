@@ -30,9 +30,9 @@ class TodoForm extends Component {
     render() {
         return(
             <div>
-                <Card style={{ width: '50rem', margin: "10px 0px"}}>
+            <Card style={{ display: "inline-block", width: '90%', margin: "10px"}}>
                 <Card.Header>New Todo</Card.Header>
-                    <Form style={{ width: '30rem' }} onSubmit={ (event) => this.handleSubmit(event)}>
+                    <Form style={{ width: '85%' }} onSubmit={ (event) => this.handleSubmit(event)}>
                         <Form.Group style={{ marginTop: "20px", paddingLeft: "10px" }}>
                             <Form.Control type="title" value={this.state.title} name="title" placeholder="Title" onChange={this.handleChange}/>
                         </Form.Group>

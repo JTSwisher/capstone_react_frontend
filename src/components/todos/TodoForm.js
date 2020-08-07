@@ -34,11 +34,11 @@ class TodoForm extends Component {
                     <Card.Header>New Todo</Card.Header>
                         <Form style={{ width: '85%' }} onSubmit={ (event) => this.handleSubmit(event)}>
                             <Form.Group style={{ marginTop: "20px", paddingLeft: "10px" }}>
-                                <Form.Control type="title" value={this.state.title} name="title" placeholder="Title" onChange={this.handleChange}/>
+                                <Form.Control type="title" value={this.state.title} name="title" placeholder="Title" onChange={(event) => this.handleChange(event)}/>
                             </Form.Group>
                             <br />
                             <Form.Group style={{ marginBottom: "10px", paddingLeft: "10px" }}>
-                                <Form.Control as="textarea" type="body" value={this.state.body} name="body" placeholder="Details" onChange={this.handleChange}/>
+                                <Form.Control as="textarea" type="body" value={this.state.body} name="body" placeholder="Details" onChange={(event) => this.handleChange(event)}/>
                             </Form.Group>
                             <Button style={{margin: "10px" }} type="submit">Add</Button>
                         </Form>

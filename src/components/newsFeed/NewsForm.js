@@ -9,21 +9,28 @@ class NewsForm extends Component {
     }
 
 
+    handleChange = event => {
+        console.log(event.target.value)
+        this.setState({
+            genre: event.target.value
+        })
+        this.props.fetchNews(this.state.genre)
+    }
+
 
     render() {
         return(
             <div>
                 <Card style={{ display: "inline-block", width: '90%', margin: "10px"}}>
-                    <Card.Header>News</Card.Header>
+                    <Card.Header>Category</Card.Header>
                     <Form>
-                        <Form.Control as="select">
+                        <Form.Control as="select" onChange={(event) => this.handleChange(event)}>
                             <option value="technology">Technology</option>
                             <option value="general">General</option>
                             <option value="business">Business</option>
                             <option value="science">Science</option>
                             <option value="sports">Sports</option>
                             <option value="health">Health</option>
-                            <option value="general">General</option>
                         </Form.Control>
                     </Form>
                 </Card>

@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 import userReducer   from './userReducer';
 import todoReducer from './todoReducer'
+import newsReducer from './newsReducer'
 
 export default combineReducers({
     user: userReducer,
-    todo: todoReducer
+    todo: todoReducer,
+    articles: newsReducer
 })
 

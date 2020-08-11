@@ -11,7 +11,7 @@ class HomeContainer extends Component {
     render() {
         console.log(this.props.user)
         return (
-            <div>
+            <div style={{padding: "1%"}}>
                 <TodoContainer />
                 <NewsContainer />
             </div>

@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 class NewsForm extends Component {
 
     state = {
-        genre: "technology"
+        genre: ""
     }
 
 
@@ -14,8 +14,9 @@ class NewsForm extends Component {
         this.setState({
             genre: event.target.value
         })
-        this.props.fetchNews(this.state.genre)
+        this.props.fetchNews(event.target.value)
     }
+
 
 
     render() {

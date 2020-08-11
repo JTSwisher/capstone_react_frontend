@@ -6,7 +6,7 @@ class Todo extends Component {
 
     render() {
         const { todo } = this.props
-        console.log(todo)
+    
         return (
             <Card style={{ display: "inline-block", width: '90%', margin: "10px"}}>
                 <Card.Header><Card.Title>{todo.title}</Card.Title></Card.Header>

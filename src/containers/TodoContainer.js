@@ -19,7 +19,7 @@ class TodoContainer extends Component {
             border: "1px solid black", 
             height: "100%", 
             padding:"2%", 
-            left: "0px", 
+            left: "1%", 
             textAlign: "center", 
             backgroundColor: "lightcyan"
         };

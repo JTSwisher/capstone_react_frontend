@@ -22,7 +22,7 @@ class NewsForm extends Component {
     render() {
         return(
             <div>
-                <Card style={{ display: "inline-block", width: '90%', margin: "10px"}}>
+                <Card style={{ display: "inline-block", width: '70%', margin: "10px"}}>
                     <Card.Header>Category</Card.Header>
                     <Form>
                         <Form.Control as="select" onChange={(event) => this.handleChange(event)}>

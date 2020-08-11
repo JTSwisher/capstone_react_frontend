@@ -17,11 +17,13 @@ class TodoContainer extends Component {
             position: "fixed", 
             width: '48%', 
             border: "1px solid black", 
-            height: "100%", 
+            height: "70%", 
             padding:"2%", 
             left: "1%", 
+            bottom: "1%",
             textAlign: "center", 
-            backgroundColor: "lightcyan"
+            backgroundColor: "lightcyan",
+            overflow: "scroll"
         };
 
         return (

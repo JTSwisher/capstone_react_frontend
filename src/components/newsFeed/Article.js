@@ -9,14 +9,14 @@ class Article extends Component {
         const { article } = this.props
         let image;
         if (article.urlToImage !== null) {
-           image =  <Card.Img variant="top" src={article.urlToImage} />
+           image =  <Card.Img variant="top" src={article.urlToImage} fluid/>
          } else { 
             image = <IconContext.Provider value={{ size: "5em"  }}> <AiOutlineFileImage  /> </IconContext.Provider> 
          }
 
         return(
             <div>
-                <Card style={{ display: "inline-block", width: '90%', margin: "10px"}}>
+                <Card style={{ display: "inline-block", width: '60%', margin: "10px"}}>
                     { image }
                     <Card.Body>
                     <Card.Title>{article.title}</Card.Title>

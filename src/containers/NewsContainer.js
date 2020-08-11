@@ -15,7 +15,7 @@ class NewsContainer extends Component {
             position: "fixed", 
             width: '48%', 
             border: "1px solid black", 
-            height: "90%", 
+            height: "93%", 
             padding:"3%", 
             right: "1%",
             bottom: "1%", 

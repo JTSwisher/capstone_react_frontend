@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import TodoContainer from './TodoContainer'
 import NewsContainer from './NewsContainer'
+import WeatherContainer from './WeatherContainer'
 
 class HomeContainer extends Component {
 
@@ -14,6 +15,7 @@ class HomeContainer extends Component {
             <div style={{padding: "1%"}}>
                 <TodoContainer />
                 <NewsContainer />
+                <WeatherContainer />
             </div>
         )
         

@@ -16,7 +16,7 @@ class Article extends Component {
 
         return(
             <div>
-                <Card style={{ display: "inline-block", width: '60%', margin: "10px"}}>
+                <Card border="secondary" style={{ display: "inline-block", width: '60%', margin: "10px", boxShadow: "1px 1px 2px grey"}}>
                     { image }
                     <Card.Body>
                     <Card.Title>{article.title}</Card.Title>

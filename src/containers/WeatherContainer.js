@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import weatherReducer from '../reducers/weatherReducer';
+import { getWeather } from '../actions/WeatherActions'
+import WeatherForm from '../components/weather/WeatherForm'
 
 class WeatherContainer extends Component {
 
@@ -20,10 +21,22 @@ class WeatherContainer extends Component {
 
         return(
             <div className="weather" style={ containerStyle }>
-
+                <WeatherForm getWeather={this.props.get}/>
             </div>
         )
     }
 }
 
-export default WeatherContainer;
+const mapDispatchToProps = dispatch => {
+    return {
+        get: (zip) => dispatch(getWeather(zip))
+    }
+}
+
+const mapStateToProps = state => {
+    return {
+        weather: state.currentWeather
+    }
+}
+
+export default connect(null, mapDispatchToProps)(WeatherContainer);

@@ -7,6 +7,7 @@ class DisplayTodos extends Component {
 
     render() {
         const todos = this.props.todos.map(t => <Todo key={t.id} todo={t} completed={this.props.completed} /> ) 
+        console.log(todos)
         return (
             <div>
                 { todos } 

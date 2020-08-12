@@ -16,7 +16,8 @@ class TodoContainer extends Component {
         const containerStyle = {
             position: "fixed", 
             width: '48%', 
-            border: "1px solid black", 
+            border: "2px solid black", 
+            borderRadius: "25px",
             height: "70%", 
             padding:"2%", 
             left: "1%", 

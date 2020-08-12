@@ -14,7 +14,8 @@ class NewsContainer extends Component {
         const containerStyle = {
             position: "fixed", 
             width: '48%', 
-            border: "1px solid black", 
+            border: "2px solid black",
+            borderRadius: "25px", 
             height: "93%", 
             padding:"3%", 
             right: "1%",

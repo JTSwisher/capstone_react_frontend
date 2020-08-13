@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
-
 
 import AuthenticationForm from '../components/authentication/AuthenticationForm';
 import { authenticate } from '../actions/AuthenticationActions'
@@ -25,7 +23,7 @@ class AuthenticationContainer extends Component {
 
         return (
             <div style={ containerStyle }>
-                <div style={{display: "inline-block"}}>
+                <div style={{display: "inline-block", width: "50%", height: "50%" }}>
                     <AuthenticationForm authenticateUser={this.props.authenticate} />
                 </div>
             </div>
@@ -40,6 +38,6 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-const mapStateToProps = ({ current_user }) => ({ current_user })
 
-export default connect(mapStateToProps ,mapDispatchToProps)(AuthenticationContainer);
+
+export default connect(null,mapDispatchToProps)(AuthenticationContainer);

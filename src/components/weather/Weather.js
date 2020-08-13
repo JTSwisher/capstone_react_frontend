@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
-import two from '../../icons/2.png'
-//import icons from icons folder in src directory
-// create case statement to determine logo that ias associated with weather card being rendered
+import { Icons } from './Icons'
+
 
 class Weather extends Component {
 
-
+  
 
     render() {
+       let icon = Icons['5']
+        // use Icons import based on weather icon id to source correct icon from import for render
        const { weather } = this.props
         
         return (
             <div>
-                <img src={two}></img>
+                <img style={{height: "50px", width: "80px"}} src={icon}></img>
             </div>
         )
     }

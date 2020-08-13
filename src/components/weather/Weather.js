@@ -22,14 +22,14 @@ class Weather extends React.Component {
        let desc = weather.Day.IconPhrase;
        let max = weather.Temperature.Maximum.Value;
        let min = weather.Temperature.Minimum.Value;
-        console.log(date)
+
         return (
             <Card border="secondary" style={{ display: "inline-block", padding: "0px", margin: "15px 5px 5px 5px", width: '18%', height: "70%", boxShadow: "1px 1px 2px grey"}}>
                 <Card.Img  variant="top" src={icon} />
                 <Card.Body style={{margin: "0px"}}>
                     <Card.Text style={{margin: "0px"}}>{date}</Card.Text>
-                    <Card.Text style={{margin: "0px"}}>Max: {max}</Card.Text>
-                    <Card.Subtitle style={{margin: "0px"}} className="text-muted">Min: {min}</Card.Subtitle>
+                    <Card.Text style={{margin: "0px"}}>High: {max}</Card.Text>
+                    <Card.Subtitle style={{margin: "0px"}} className="text-muted">Low: {min}</Card.Subtitle>
                 </Card.Body>
 
             </Card>

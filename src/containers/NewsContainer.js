@@ -17,7 +17,7 @@ class NewsContainer extends Component {
             border: "2px solid black",
             borderRadius: "25px", 
             height: "93%", 
-            padding:"3%", 
+            padding:"1%", 
             right: "1%",
             bottom: "1%", 
             textAlign: "center", 
@@ -26,7 +26,7 @@ class NewsContainer extends Component {
         };
         return (
             <div style={ containerStyle }>
-                <h1>News Feed</h1>
+                <h3>News Feed</h3>
                 <NewsForm fetchNews={this.props.get} />
                 <DisplayArticles articles={this.props.articles} />
             </div>

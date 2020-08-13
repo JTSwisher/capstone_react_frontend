@@ -15,16 +15,15 @@ class Article extends Component {
          }
 
         return(
-            <div>
-                <Card border="secondary" style={{ display: "inline-block", width: '60%', margin: "10px", boxShadow: "1px 1px 2px grey"}}>
-                    { image }
-                    <Card.Body>
-                    <Card.Title>{article.title}</Card.Title>
-                        <Card.Subtitle className="text-muted">Source: {article.source.name}</Card.Subtitle>
-                        <Card.Link href={article.url} target="blank" alt="Article Image">Read Article</Card.Link>
-                    </Card.Body>
-               </Card>
-            </div>
+            <Card border="secondary" style={{ width: '100%', padding: "5px", boxShadow: "1px 1px 2px grey"}}>
+                { image }
+                <Card.Body>
+                <Card.Title>{article.title}</Card.Title>
+                    <Card.Subtitle className="text-muted">Source: {article.source.name}</Card.Subtitle>
+                    <Card.Link href={article.url} target="blank" alt="Article Image">Read Article</Card.Link>
+                </Card.Body>
+            </Card>
+           
         )
     }
 }

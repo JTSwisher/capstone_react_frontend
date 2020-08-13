@@ -1,9 +1,11 @@
-const weatherReducer = (state= {currentWeather: [], requesting: false}, action) => {
+const weatherReducer = (state= {weatherForecast: [], requesting: false}, action) => {
     switch(action.type) {
-        case "FETCHING_WEATHER":
-            return {...state, currentWeather: [...state.currentWeather], requesting: true}
-        case "WEATHER_RECEIVED":
-            return {...state, currentWeather: [...state.currentWeather].concat(action.resJSON), requesting: false}
+        case "FETCHING_LOCATION_KEY":
+            return {...state, weatherForecast: [], requesting: true}
+        case "FETCHING_WEATHER_FORECAST":
+            return {...state, weatherForecast: [], requesting: true}
+        case "WEATHER_FORECAST_RECEIVED":
+            return {...state, weatherForecast: [].concat(action.weather), requesting: false}
         default: 
             return state;
     }

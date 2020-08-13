@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getWeather } from '../actions/WeatherActions'
+import { getLocationKey } from '../actions/WeatherActions'
 import WeatherForm from '../components/weather/WeatherForm'
 import DisplayWeather from '../components/weather/DisplayWeather'
 
@@ -13,7 +13,7 @@ class WeatherContainer extends Component {
             border: "2px solid black",
             borderRadius: "25px", 
             height: "21%", 
-            padding:"2%", 
+            padding:"1%", 
             left: "1%", 
             top: "6%",
             textAlign: "center", 
@@ -23,7 +23,7 @@ class WeatherContainer extends Component {
 
         return(
             <div className="weather" style={ containerStyle }>
-                <WeatherForm getWeather={this.props.get}/>
+                <WeatherForm getLocationKey={this.props.getKey} />
                 <DisplayWeather weather={this.props.weather}/>
             </div>
         )
@@ -32,13 +32,13 @@ class WeatherContainer extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        get: (zip) => dispatch(getWeather(zip))
+        getKey: (zip) => dispatch(getLocationKey(zip))
     }
 }
 
 const mapStateToProps = state => {
     return {
-        weather: state.weather.currentWeather
+        weather: state.weather.weatherForecast
     }
 }
 

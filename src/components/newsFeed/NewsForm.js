@@ -21,20 +21,19 @@ class NewsForm extends Component {
 
     render() {
         return(
-            <div>
-                <Card style={{ display: "inline-block", width: '70%', margin: "10px"}}>
-                    <Card.Header>Category</Card.Header>
-                    <Form>
-                        <Form.Control as="select" onChange={(event) => this.handleChange(event)}>
-                            <option value="technology">Technology</option>
-                            <option value="general">General</option>
-                            <option value="business">Business</option>
-                            <option value="science">Science</option>
-                            <option value="sports">Sports</option>
-                            <option value="health">Health</option>
-                        </Form.Control>
-                    </Form>
-                </Card>
+            <div>        
+                <Form inline>
+                    <Form.Label className="my-1 mr-2" htmlFor="category">Category</Form.Label>
+                    <Form.Control as="select" id="category" onChange={(event) => this.handleChange(event)}>
+                        <option value="technology">Technology</option>
+                        <option value="general">General</option>
+                        <option value="business">Business</option>
+                        <option value="science">Science</option>
+                        <option value="sports">Sports</option>
+                        <option value="health">Health</option>
+                    </Form.Control>
+                </Form>
+                
             </div>
         )
     }

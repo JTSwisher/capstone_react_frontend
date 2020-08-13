@@ -18,7 +18,7 @@ class WeatherForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        this.props.getWeather(this.state.zip)
+        this.props.getLocationKey(this.state.zip);
         this.setState({
             zip: '',
         })
@@ -27,7 +27,7 @@ class WeatherForm extends Component {
     render() {
         return(
             <div> 
-                <Form style={{ width: '50%' }} onSubmit={ (event) => this.handleSubmit(event) }>
+                <Form style={{ width: '50%' }} onSubmit={ (event) => this.handleSubmit(event) } inline>
                     <Form.Row>
                         <Col>
                             <Form.Control type="" value={this.state.zip} name="zip" placeholder="Zipcode" onChange={(event) => this.handleChange(event)}/>

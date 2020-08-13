@@ -30,6 +30,7 @@ class WeatherContainer extends Component {
     }
 }
 
+
 const mapDispatchToProps = dispatch => {
     return {
         getKey: (zip) => dispatch(getLocationKey(zip))

@@ -8,14 +8,24 @@ class Weather extends Component {
   
 
     render() {
-       let icon = Icons['5']
-        // use Icons import based on weather icon id to source correct icon from import for render
-       const { weather } = this.props
-        
+       const { weather } = this.props; 
+       let icon = Icons[weather.Day.Icon];
+       let date = weather.date;
+       let desc = weather.Day.IconPhrase;
+       let max = weather.Temperature.Maximum.Value;
+       let min = weather.Temperature.Minimum.Value
+       
+        console.log(max)
         return (
-            <div>
-                <img style={{height: "50px", width: "80px"}} src={icon}></img>
-            </div>
+            <Card border="secondary" style={{ display: "inline-block", width: '15%', boxShadow: "1px 1px 2px grey"}}>
+                <Card.Img variant="top" src={icon} fluid/>
+                <Card.Body>
+                    <Card.Title>{desc}</Card.Title>
+                    <Card.Text>Maximum: {max}</Card.Text>
+                    <Card.Subtitle className="text-muted">Minimum: {min}</Card.Subtitle>
+                </Card.Body>
+
+            </Card>
         )
     }
 }

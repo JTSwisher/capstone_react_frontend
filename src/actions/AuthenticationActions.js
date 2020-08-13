@@ -11,17 +11,21 @@ export const authenticate = (user) => {
             },
             body: JSON.stringify({user: user})
         })
+       
         .then(response => response.json())
         .then(user => {
-            const token = user.token;
-            localStorage.setItem('token', token);
-            dispatch({type:"USER_AUTHENTICATED", user});
+            console.log(user)
+            if (user.error) {
+                window.alert(user.error)
+            } else {
+                const token = user.token;
+                localStorage.setItem('token', token);
+                dispatch({type:"USER_AUTHENTICATED", user});
+                history.push("/home")
+            }
         })
-        .then(() => {
-            history.push("/home")
-         })
-        .catch((errors) => {
-            dispatch({type:"AUTHENTICATION_ERROR", errors})
+        .catch((error) => {
+            dispatch({type:"AUTHENTICATION_ERROR", error})
             localStorage.clear()
         })
     }

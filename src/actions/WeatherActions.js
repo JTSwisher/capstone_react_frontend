@@ -6,6 +6,8 @@ export const getLocationKey = (zip) => {
         fetch(`http://dataservice.accuweather.com/locations/v1/postalcodes/US/search?apikey=${API_KEY}&q=${zip}`)
         .then(response => response.json())
         .then(resJSON => {
+            const location = resJSON['0']['EnglishName'];
+            dispatch({type: "LOCATION_FETCHED", location});
             const location_key = resJSON['0']['Key']
             dispatch(getWeatherForecast(location_key))
         })

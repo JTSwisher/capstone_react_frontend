@@ -12,7 +12,7 @@ class WeatherContainer extends Component {
             width: '48%', 
             border: "2px solid black",
             borderRadius: "25px", 
-            height: "21%", 
+            height: "30%", 
             padding:"1%", 
             left: "1%", 
             top: "6%",
@@ -24,7 +24,7 @@ class WeatherContainer extends Component {
         return(
             <div className="weather" style={ containerStyle }>
                 <WeatherForm getLocationKey={this.props.getKey} />
-                <DisplayWeather weather={this.props.weather}/>
+                <DisplayWeather weather={this.props.weather} location={this.props.location}/>
             </div>
         )
     }
@@ -39,8 +39,10 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = state => {
     return {
-        weather: state.weather.weatherForecast
+        weather: state.weather.weatherForecast,
+        location: state.weather.location
     }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(WeatherContainer);
+

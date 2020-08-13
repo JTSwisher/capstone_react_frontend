@@ -7,11 +7,12 @@ class DisplayWeather extends Component {
        const weather = this.props.weather.map(w => console.log(w) )
        console.log(this.props.weather)
         return (
-            <div style={{right: "1px"}}>
-                { weather }
+            <div>
+               <Weather />
             </div>
         )
     }
 }
 
 export default DisplayWeather;
+

@@ -10,14 +10,13 @@ class WeatherContainer extends Component {
         const containerStyle = {
             position: "fixed", 
             width: '48%', 
-            border: "2px solid black",
             borderRadius: "25px", 
-            height: "30%", 
+            height: "28%", 
             padding:"1%", 
             left: "1%", 
-            top: "6%",
+            top: "7%",
             textAlign: "center", 
-            backgroundColor: "lightcyan",
+            backgroundColor: "#97AABD",
             overflow: "scroll"
         };
 

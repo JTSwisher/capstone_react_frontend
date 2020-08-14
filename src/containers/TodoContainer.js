@@ -15,15 +15,14 @@ class TodoContainer extends Component {
     render() {
         const containerStyle = {
             position: "fixed", 
-            width: '48%', 
-            border: "2px solid black", 
+            width: '48%',
             borderRadius: "25px",
-            height: "60%", 
-            padding:"2%", 
+            height: "62%", 
+            padding:"1%", 
             left: "1%", 
             bottom: "1%",
             textAlign: "center", 
-            backgroundColor: "white",
+            backgroundColor: "#97AABD",
             overflow: "scroll",
             display: "inline"
         };

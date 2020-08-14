@@ -13,15 +13,15 @@ class NewsContainer extends Component {
     render() {
         const containerStyle = {
             position: "fixed", 
-            width: '48%', 
-            border: "2px solid black",
+            width: '49%', 
             borderRadius: "25px", 
-            height: "93%", 
+            height: "92%", 
             padding:"1%", 
             right: "1%",
             bottom: "1%", 
             textAlign: "center", 
-            backgroundColor: "lightcyan",
+            backgroundColor: "#97AABD",
+            color: "WHITE",
             overflow: "scroll",
         };
         return (

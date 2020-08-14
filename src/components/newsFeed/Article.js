@@ -15,7 +15,7 @@ class Article extends Component {
          }
 
         return(
-            <Card border="secondary" style={{ width: '100%', padding: "5px", boxShadow: "1px 1px 2px grey"}}>
+            <Card border="secondary" style={{ width: '100%', padding: "5px", boxShadow: "1px 1px 2px grey", backgroundColor: "#9E5A63"}}>
                 { image }
                 <Card.Body>
                 <Card.Title>{article.title}</Card.Title>

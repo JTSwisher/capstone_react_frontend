@@ -18,7 +18,9 @@ export const authenticate = (user) => {
             if (user.error) {
                 window.alert(user.error)
             } else {
+                const userId = user.id;
                 const token = user.token;
+                localStorage.setItem('user', userId);
                 localStorage.setItem('token', token);
                 dispatch({type:"USER_AUTHENTICATED", user});
                 history.push("/home")

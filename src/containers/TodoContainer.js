@@ -9,7 +9,9 @@ import { createTodo, getTodos } from '../actions/TodoActions'
 class TodoContainer extends Component {
 
     componentDidMount() {
-        this.props.get(this.props.user.id)
+        if (localStorage.user) {
+            this.props.get(localStorage.user)
+        }
     }
 
     render() {
@@ -30,7 +32,7 @@ class TodoContainer extends Component {
         return (
             <div className="todos" style={ containerStyle }>
                 <h4>Your Todo's</h4>
-                <TodoForm createTodo={this.props.create} user={this.props.user.id}/>
+                <TodoForm createTodo={this.props.create} user={localStorage.user}/>
                 <DisplayTodos todos={this.props.todos} />
             </div>
         )

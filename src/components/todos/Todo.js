@@ -9,10 +9,9 @@ class Todo extends Component {
         
         return (
             <Card style={{ display: "inline-block", width: '90%', margin: "10px"}}>
-                <Card.Header><Card.Title>{todo.title}</Card.Title></Card.Header>
                 <Card.Body>
                     <Card.Text>{todo.body}</Card.Text>
-                    <Button onClick={ () => this.props.completed(todo.user_id, todo.id)} >Complete</Button>
+                    <Button variant="success" onClick={ () => this.props.completed(todo.user_id, todo.id)} >Complete</Button>
                 </Card.Body>
             </Card>
         )

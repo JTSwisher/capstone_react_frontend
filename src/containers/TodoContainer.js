@@ -24,12 +24,13 @@ class TodoContainer extends Component {
             bottom: "1%",
             textAlign: "center", 
             backgroundColor: "white",
-            overflow: "scroll"
+            overflow: "scroll",
+            display: "inline"
         };
 
         return (
             <div className="todos" style={ containerStyle }>
-                <h1>Todo's</h1>
+                <h4>Your Todo's</h4>
                 <TodoForm createTodo={this.props.create} user={this.props.user.id}/>
                 <DisplayTodos todos={this.props.todos} />
             </div>

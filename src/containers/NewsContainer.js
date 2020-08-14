@@ -26,7 +26,7 @@ class NewsContainer extends Component {
         };
         return (
             <div style={ containerStyle }>
-                <h3>News Feed</h3>
+                <h4>News Feed</h4>
                 <NewsForm fetchNews={this.props.get} />
                 <DisplayArticles articles={this.props.articles} />
             </div>

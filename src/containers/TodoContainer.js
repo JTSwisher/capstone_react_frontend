@@ -18,12 +18,12 @@ class TodoContainer extends Component {
             width: '48%', 
             border: "2px solid black", 
             borderRadius: "25px",
-            height: "70%", 
+            height: "60%", 
             padding:"2%", 
             left: "1%", 
             bottom: "1%",
             textAlign: "center", 
-            backgroundColor: "lightcyan",
+            backgroundColor: "white",
             overflow: "scroll"
         };
 

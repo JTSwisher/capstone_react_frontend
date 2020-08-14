@@ -6,7 +6,6 @@ import Card from 'react-bootstrap/Card'
 class TodoForm extends Component {
 
     state = {
-        title: '',
         body: '',
         user_id: this.props.user
     }
@@ -22,7 +21,6 @@ class TodoForm extends Component {
         event.preventDefault();
         this.props.createTodo(this.state, this.props.user)
         this.setState({
-            title: '',
             body: ''
         })
     }
@@ -31,12 +29,8 @@ class TodoForm extends Component {
         return(
             <div>
                 <Card style={{ display: "inline-block", width: '90%', margin: "10px"}}>
-                    <Card.Header>New Todo</Card.Header>
+                    <Card.Header>Add Todo</Card.Header>
                         <Form style={{ width: '85%' }} onSubmit={ (event) => this.handleSubmit(event)}>
-                            <Form.Group style={{ marginTop: "20px", paddingLeft: "10px" }}>
-                                <Form.Control type="title" value={this.state.title} name="title" placeholder="Title" onChange={(event) => this.handleChange(event)}/>
-                            </Form.Group>
-                            <br />
                             <Form.Group style={{ marginBottom: "10px", paddingLeft: "10px" }}>
                                 <Form.Control as="textarea" type="body" value={this.state.body} name="body" placeholder="Details" onChange={(event) => this.handleChange(event)}/>
                             </Form.Group>

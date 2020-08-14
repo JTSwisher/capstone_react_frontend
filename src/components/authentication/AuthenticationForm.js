@@ -22,7 +22,6 @@ class AuthenticationForm extends Component {
     handleSubmit = event => {
         event.preventDefault();
         this.props.authenticateUser(this.state);
-        
     }
 
    

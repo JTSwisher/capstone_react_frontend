@@ -4,8 +4,6 @@ import Button from 'react-bootstrap/Button'
 
 class LandingContainer extends Component {
 
-
-
     render() {
         const containerStyle = {
             backgroundColor: "#bd4f6c",

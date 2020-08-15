@@ -13,10 +13,23 @@ class NavContainer extends Component {
         history.push("/")
     }
 
+  
+    getDate = () => {
+        let d = new Date();
+        let dateString = d.toString()
+        let dateArray = dateString.split(" ");
+        let day = dateArray.slice(0,1);
+        let month = dateArray.slice(1,2);
+        let dayNumber = dateArray.slice(2,3)
+        let currentDate = day + ", " + month + " " + dayNumber;
+        return currentDate
+    }
+
     render() {
         return (
             <div>
                 <Nav className="navbar  navbar-expand-sm navbar-light bg-light">
+                    <h4>Daily Dash - {this.getDate()}</h4>
                     <ul className=" navbar-nav ml-auto">
                         <li className="nav-item" style={{margin: "5px 10px 5px 4px"}}>
                             <h4>Hey, {this.props.user.username}</h4>

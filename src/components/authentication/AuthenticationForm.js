@@ -36,7 +36,7 @@ class AuthenticationForm extends Component {
                     <Form.Control style={{margin: "10px" }} type="username" value={this.state.title} name="username" placeholder="Username" onChange={(event) => this.handleChange(event)}/>
                     <Form.Control style={{margin: "10px" }} type="email" value={this.state.title} name="email" placeholder="Email" onChange={(event) => this.handleChange(event)}/>
                     <Form.Control style={{margin: "10px" }} type="password" value={this.state.title} name="password" placeholder="Password" onChange={(event) => this.handleChange(event)}/>
-                    <Button style={{margin: "10px" }} type="submit">Login</Button>
+                    <Button style={{margin: "10px" }} variant="info" type="submit">Login</Button>
                     <LinkContainer to="/" style={{margin: "10px" }}>
                         <Button type="submit" variant="danger" >Cancel</Button>
                     </LinkContainer>

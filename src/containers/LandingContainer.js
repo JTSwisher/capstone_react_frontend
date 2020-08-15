@@ -27,10 +27,7 @@ class LandingContainer extends Component {
                     <h1>Welcome to DailyDash!</h1>
                     <h4>An enhanced Todo App</h4>
                     <LinkContainer to="/login" style={buttonStyle} >
-                        <Button type="submit">Login</Button>
-                    </LinkContainer>
-                    <LinkContainer to="/login" style={buttonStyle} >
-                        <Button type="submit">Signup</Button>
+                        <Button variant="info" type="submit">Login / Signup</Button>
                     </LinkContainer>
                 </div>
             </div>

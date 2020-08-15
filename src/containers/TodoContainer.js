@@ -20,11 +20,11 @@ class TodoContainer extends Component {
             width: '48%',
             borderRadius: "25px",
             height: "62%", 
-            padding:"1%", 
+            padding: "1%", 
             left: "1%", 
             bottom: "1%",
             textAlign: "center", 
-            backgroundColor: "#97AABD",
+            backgroundColor: "#a4b3b6",
             overflow: "scroll",
             display: "inline"
         };

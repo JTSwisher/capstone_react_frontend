@@ -30,10 +30,10 @@ class WeatherForm extends Component {
                 <Form style={{ width: '50%' }} onSubmit={ (event) => this.handleSubmit(event) } inline>
                     <Form.Row style={{ width: '60%' }}>
                         <Col>
-                            <Form.Control style={{ width: '90%' }} type="" value={this.state.zip} name="zip" placeholder="Zipcode" onChange={(event) => this.handleChange(event)}/>
+                            <Form.Control style={{ width: '100%' }} type="" value={this.state.zip} name="zip" placeholder="Zipcode" onChange={(event) => this.handleChange(event)}/>
                         </Col>
                         <Col>
-                            <Button type="submit">Submit</Button>
+                            <Button type="submit" variant="info">Submit</Button>
                         </Col>
                     </Form.Row>
                 </Form>

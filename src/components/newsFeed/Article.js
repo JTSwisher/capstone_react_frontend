@@ -15,11 +15,11 @@ class Article extends Component {
          }
 
         return(
-            <Card border="secondary" style={{ width: '100%', padding: "5px", boxShadow: "1px 1px 2px grey", backgroundColor: "#9E5A63"}}>
+            <Card border="secondary" style={{ width: '100%', padding: "2px", boxShadow: "1px 1px 2px black", color: "black", backgroundColor: "#D1E8E2"}}>
                 { image }
                 <Card.Body>
                 <Card.Title>{article.title}</Card.Title>
-                    <Card.Subtitle className="text-muted">Source: {article.source.name}</Card.Subtitle>
+                    <Card.Subtitle>Source: {article.source.name}</Card.Subtitle>
                     <Card.Link href={article.url} target="blank" alt="Article Image">Read Article</Card.Link>
                 </Card.Body>
             </Card>

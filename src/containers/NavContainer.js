@@ -22,7 +22,7 @@ class NavContainer extends Component {
                             <h4>Hey, {this.props.user.username}</h4>
                         </li>
                         <li className="nav-item">
-                            <Button onClick = {event => this.handleClick(event)}>Logout</Button>
+                            <Button variant="info" onClick = {event => this.handleClick(event)}>Logout</Button>
                         </li>
                     </ul>
                    

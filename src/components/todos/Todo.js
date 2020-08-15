@@ -8,10 +8,10 @@ class Todo extends Component {
         const { todo } = this.props
         
         return (
-            <Card style={{ display: "inline-block", width: '90%', margin: "10px"}}>
+            <Card style={{ display: "inline-block", width: '90%', margin: "10px", boxShadow: "1px 1px 2px black", color: "black", backgroundColor: "#D1E8E2"}}>
                 <Card.Body>
                     <Card.Text>{todo.body}</Card.Text>
-                    <Button variant="success" onClick={ () => this.props.completed(todo.user_id, todo.id)} >Complete</Button>
+                    <Button variant="info" onClick={ () => this.props.completed(todo.user_id, todo.id)} >Complete</Button>
                 </Card.Body>
             </Card>
         )

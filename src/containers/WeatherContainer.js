@@ -16,7 +16,7 @@ class WeatherContainer extends Component {
             left: "1%", 
             top: "7%",
             textAlign: "center", 
-            backgroundColor: "#97AABD",
+            backgroundColor: "#a4b3b6",
             overflow: "scroll"
         };
 

@@ -20,10 +20,10 @@ class NewsContainer extends Component {
             right: "1%",
             bottom: "1%", 
             textAlign: "center", 
-            backgroundColor: "#97AABD",
-            color: "WHITE",
-            overflow: "scroll",
+            backgroundColor: "#a4b3b6",
+            overflow: "scroll"
         };
+
         return (
             <div style={ containerStyle }>
                 <h4>News Feed</h4>

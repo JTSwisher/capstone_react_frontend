@@ -25,7 +25,6 @@ class LandingContainer extends Component {
             <div style={ containerStyle}>
                 <div style={{display: "inline-block"}}>
                     <h1>Welcome to DailyDash!</h1>
-                    <h4>An enhanced Todo App</h4>
                     <LinkContainer to="/login" style={buttonStyle} >
                         <Button variant="info" type="submit">Login / Signup</Button>
                     </LinkContainer>

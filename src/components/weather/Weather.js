@@ -19,7 +19,6 @@ class Weather extends React.Component {
        const { weather } = this.props; 
        let icon = Icons[weather.Day.Icon];
        let date = this.convertTime(weather.EpochDate);
-       let desc = weather.Day.IconPhrase;
        let max = weather.Temperature.Maximum.Value;
        let min = weather.Temperature.Minimum.Value;
 

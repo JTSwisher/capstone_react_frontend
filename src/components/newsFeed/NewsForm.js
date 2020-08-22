@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
-import Card from 'react-bootstrap/Card'
 
 class NewsForm extends Component {
 
@@ -8,16 +7,12 @@ class NewsForm extends Component {
         genre: ""
     }
 
-
     handleChange = event => {
-        console.log(event.target.value)
         this.setState({
             genre: event.target.value
         })
         this.props.fetchNews(event.target.value)
     }
-
-
 
     render() {
         return(

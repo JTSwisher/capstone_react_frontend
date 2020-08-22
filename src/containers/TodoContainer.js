@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 
 import TodoForm from '../components/todos/TodoForm'
 import DisplayTodos from '../components/todos/DisplayTodos'
-
 import { createTodo, getTodos } from '../actions/TodoActions'
 
 class TodoContainer extends Component {
 
+    // if localStorage.user true? fetch todos for that user
     componentDidMount() {
         if (localStorage.user) {
             this.props.get(localStorage.user)
@@ -48,7 +48,7 @@ const mapDispatchToProps = dispatch => {
 }
 
 const mapStateToProps = (state) => {
-    return {user: state.user.current_user, todos: state.todo.todos}
+    return {todos: state.todo.todos}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoContainer);

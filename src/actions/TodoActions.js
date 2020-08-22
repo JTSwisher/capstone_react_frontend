@@ -1,3 +1,4 @@
+//POST request to persist newly created todo to DB an associate with userId
 export const createTodo = (todo, userId) => {
     return (dispatch) => {
         dispatch({type: "CREATING_TODO" });
@@ -16,6 +17,7 @@ export const createTodo = (todo, userId) => {
     }
 };
 
+// GET request to retrieve all todos associated with passed in userId
 export const getTodos = userId => {
     return(dispatch) => {
         dispatch({type: "FETCHING_TODOS"});
@@ -27,6 +29,7 @@ export const getTodos = userId => {
     }
 };
 
+// DELETE request to api to delete todo
 export const todoCompleted = (userId, id) => {
     return(dispatch) => {
         dispatch({type: "DELETING_TODO"});
@@ -38,10 +41,10 @@ export const todoCompleted = (userId, id) => {
             },
         })
         .then(() => {
-            dispatch({type: "TODO_COMPLETED", id})
+            dispatch({type: "TODO_DELETED", id})
         })
-        .catch(e => {
-            console.log(e)
+        .catch(error => {
+            console.log(error)
         }) 
     }
 }

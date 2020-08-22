@@ -1,5 +1,5 @@
 import history from '../History';
-
+// POST request to authenticate user login/signup. If succesful redirect "/home" 
 export const authenticate = (user) => {
     return (dispatch) => {
         dispatch({type: "AUTHENTICATING_USER" });
@@ -11,10 +11,8 @@ export const authenticate = (user) => {
             },
             body: JSON.stringify({user: user})
         })
-       
         .then(response => response.json())
         .then(user => {
-            console.log(user)
             if (user.error) {
                 window.alert(user.error)
             } else {

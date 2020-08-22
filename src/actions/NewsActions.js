@@ -6,9 +6,9 @@ export const getNews = (genre) => {
         fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${genre}&pageSize=80&apiKey=${API_KEY}`)
         .then(response => response.json())
         .then(resJSON => {
-            console.log(resJSON)
             dispatch({type: "NEWS_RECEIVED", resJSON})
         })
         .catch(error => console.log(error))
     }
 }
+

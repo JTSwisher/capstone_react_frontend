@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
 import history from '../History';
 
 import Nav from 'react-bootstrap/Nav';
@@ -8,12 +7,13 @@ import Button from 'react-bootstrap/Button';
 
 class NavContainer extends Component {
 
+    // On logout button click, clear local storage redirect "/"
     handleClick = event => {
         window.localStorage.clear();
         history.push("/")
     }
 
-  
+    // function returns current date in (Sat, Aug 22 format) 
     getDate = () => {
         let d = new Date();
         let dateString = d.toString()
@@ -46,7 +46,7 @@ class NavContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
-    return {user: state.user.current_user}
+    return {user: state.user.currentUser}
 }
 
 export default connect(mapStateToProps)(NavContainer);

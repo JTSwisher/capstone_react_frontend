@@ -29,6 +29,7 @@ These instructions will get a local copy of DailyDash up and running on your mac
 * [Rails] (https://rubyonrails.org/)
 * [Node.js] (https://nodejs.org/en/)
 * [NPM] (https://www.npmjs.com/)
+* [PostgreSQL] (https://www.postgresql.org/)
 
 ### Installation
 Fork and clone the [Frontend Repo] (https://github.com/JTSwisher/capstone_react_frontend) and the Backend Repo] (https://github.com/JTSwisher/capstone_backend_api) to your local machine.

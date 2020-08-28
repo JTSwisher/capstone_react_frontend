@@ -23,15 +23,26 @@ class Weather extends React.Component {
        let max = weather.Temperature.Maximum.Value;
        let min = weather.Temperature.Minimum.Value;
 
+       const cardStyle = {
+        display: "inline-block",
+        padding: "0px",
+        margin: "15px 5px 5px 5px",
+        width: '18%',
+        height: "60%",
+        boxShadow: "1px 1px 2px black",
+        borderRadius: "10px",
+        color: "black",
+        backgroundColor: "#D1E8E2"
+       }
+
         return (
-            <Card border="secondary" style={{ display: "inline-block", padding: "0px", margin: "15px 5px 5px 5px", width: '18%', height: "70%", boxShadow: "1px 1px 2px black",borderRadius: "10px", color: "black", backgroundColor: "#D1E8E2"}}>
+            <Card border="secondary" style={ cardStyle }>
                 <Card.Img variant="top" src={icon} />
                 <Card.Body style={{margin: "0px"}}>
                     <Card.Text style={{margin: "0px"}}>{date}</Card.Text>
                     <Card.Text style={{margin: "0px"}}>High: {max}</Card.Text>
                     <Card.Subtitle style={{margin: "0px"}}>Low: {min}</Card.Subtitle>
                 </Card.Body>
-
             </Card>
         )
     }

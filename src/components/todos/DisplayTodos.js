@@ -5,10 +5,11 @@ import { todoCompleted } from '../../actions/TodoActions'
 
 class DisplayTodos extends Component {
     
-
-    
     render() {
-        const todos = this.props.todos.map(t => <Todo key={t.id} todo={t} completed={this.props.completed} /> )
+        const todosClone = [...this.props.todos]
+        const sortedTodos = this.props.toggleState ? todosClone.reverse() : this.props.todos
+    
+        const todos = sortedTodos.map(t => <Todo key={t.id} todo={t} completed={this.props.completed} /> ) 
         return (
             <div>
                  { todos }

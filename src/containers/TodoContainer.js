@@ -8,11 +8,21 @@ import { createTodo, getTodos } from '../actions/TodoActions'
 
 class TodoContainer extends Component {
 
+    state = {
+        switchOn: false,
+    }
+
     // use localstorage  user object to fetch todos on container render
     componentDidMount() {
         if (localStorage.user) {
             this.props.get(localStorage.user)
         }
+    }
+
+    handleChange = (event) => {
+        this.setState({
+            switchOn: !this.state.switchOn
+        })
     }
 
     render() {
@@ -33,8 +43,16 @@ class TodoContainer extends Component {
         return (
             <div className="todos" style={ containerStyle }>
                 <h4>Todo's</h4>
+                <Form>
+                    <Form.Check
+                        onChange={ event => this.handleChange(event)} 
+                        type="switch"
+                        label={this.state.switchOn ? "Newest First" : "Oldest First"}
+                        id="switchEnabled"
+                    />
+                </Form>
                 <TodoForm createTodo={this.props.create} />
-                <DisplayTodos todos={this.props.todos} />
+                <DisplayTodos todos={this.props.todos} toggleState={this.state.switchOn}/>
             </div>
         )
         

@@ -22,7 +22,6 @@ class TodoForm extends Component {
         event.preventDefault();
         console.log('a')
         this.props.createTodo(this.state, localStorage.user)
-        console.log('g')
         this.setState({
             body: ''
         })

@@ -20,8 +20,8 @@ class NewsForm extends Component {
                 <Form inline>
                     <Form.Label className="my-1 mr-2" htmlFor="category">Category</Form.Label>
                     <Form.Control as="select" id="category" onChange={(event) => this.handleChange(event)}>
-                        <option value="technology">Technology</option>
                         <option value="general">General</option>
+                        <option value="technology">Technology</option>
                         <option value="business">Business</option>
                         <option value="science">Science</option>
                         <option value="sports">Sports</option>

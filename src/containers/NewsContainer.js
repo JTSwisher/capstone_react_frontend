@@ -6,9 +6,9 @@ import { getNews } from '../actions/NewsActions'
 
 class NewsContainer extends Component {
 
-    // on HomContainer render NewsContainer mounts, fetch news data with defauls tech category
+    // on HomContainer render NewsContainer mounts, fetch news data with default category
     componentDidMount() {
-        this.props.get("technology")
+        this.props.get("general")
     }
 
     render() {

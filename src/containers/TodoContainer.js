@@ -7,7 +7,7 @@ import { createTodo, getTodos } from '../actions/TodoActions'
 
 class TodoContainer extends Component {
 
-    // if localStorage.user true? fetch todos for that user
+    // use localstorage  user object to fetch todos on container render
     componentDidMount() {
         if (localStorage.user) {
             this.props.get(localStorage.user)
@@ -31,8 +31,8 @@ class TodoContainer extends Component {
 
         return (
             <div className="todos" style={ containerStyle }>
-                <h4>Your Todo's</h4>
-                <TodoForm createTodo={this.props.create} user={localStorage.user}/>
+                <h4>Todo's</h4>
+                <TodoForm createTodo={this.props.create} />
                 <DisplayTodos todos={this.props.todos} />
             </div>
         )

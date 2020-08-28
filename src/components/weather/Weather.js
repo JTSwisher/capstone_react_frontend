@@ -5,6 +5,7 @@ import { Icons } from './Icons'
 
 class Weather extends React.Component {
 
+    //Converts epoch time to (Sat Aug 22) format
     convertTime = (epoch) => {
         var utcSeconds = epoch;
         var d = new Date(0);

@@ -13,7 +13,7 @@ class NavContainer extends Component {
         history.push("/")
     }
 
-    // function returns current date in (Sat, Aug 22 format) 
+    // function returns current date in (Sat, Aug 22) format 
     getDate = () => {
         let d = new Date();
         let dateString = d.toString()

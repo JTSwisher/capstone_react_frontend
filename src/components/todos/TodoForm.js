@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card'
+import Col from 'react-bootstrap/esm/Col';
 
 class TodoForm extends Component {
 
     state = {
         body: '',
-        user_id: this.props.user
+        user_id: localStorage.user
     }
 
     handleChange = event => {
@@ -19,7 +19,7 @@ class TodoForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
-        this.props.createTodo(this.state, this.props.user)
+        this.props.createTodo(this.state, localStorage.user)
         this.setState({
             body: ''
         })
@@ -27,18 +27,17 @@ class TodoForm extends Component {
 
     render() {
         return(
-            <div>
-                <Card style={{ display: "inline-block", width: '90%', margin: "10px",boxShadow: "1px 1px 2px black",borderRadius: "10px", padding: "0px", backgroundColor: "#D1E8E2"}}>
-                        <Card.Body>
-                            <Form style={{ width: '85%', display: "inline-block" }} onSubmit={ (event) => this.handleSubmit(event)}>
-                            <Card.Title>Add Todo</Card.Title>
-                                <Form.Group style={{ marginBottom: "10px", marginLeft: "10px",boxShadow: "1px 1px 2px black" }}>
-                                    <Form.Control as="textarea" type="body" value={this.state.body} name="body" placeholder="Details" onChange={(event) => this.handleChange(event)}/>
-                                </Form.Group>
-                                <Button style={{margin: "10px" }} type="submit" variant="info">Add</Button>
-                            </Form>
-                        </Card.Body>
-                </Card>
+            <div style={{ display: "inline-block", width: '90%', margin: "10px",boxShadow: "1px 1px 2px black", borderRadius: "10px", padding: "0px", backgroundColor: "#D1E8E2"}}>
+                <Form  onSubmit={ (event) => this.handleSubmit(event)} >
+                    <Form.Row style={{ margin: "10px", marginLeft: "10px"}}>
+                        <Col xs={10}>
+                        <Form.Control type="body" value={this.state.body} name="body" placeholder="Details" onChange={(event) => this.handleChange(event)}/>
+                        </Col>
+                        <Col xs={2}>
+                        <Button style={{right: "0" }} type="submit" variant="info">Add</Button>
+                        </Col>
+                    </Form.Row>
+                </Form>          
             </div>
         )
     }

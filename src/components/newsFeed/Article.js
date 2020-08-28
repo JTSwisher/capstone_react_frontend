@@ -29,4 +29,3 @@ class Article extends Component {
 }
 
 export default Article;
-

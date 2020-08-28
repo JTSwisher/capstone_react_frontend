@@ -4,13 +4,14 @@ import  Todo  from './Todo'
 import { todoCompleted } from '../../actions/TodoActions'
 
 class DisplayTodos extends Component {
+    
+
+    
     render() {
-        // map over todos props pass each todo object down to <Todo/> for styling along with todoCompleted action creator
-        const todos = this.props.todos.map(t => <Todo key={t.id} todo={t} completed={this.props.completed} /> ) 
-        console.log(todos)
+        const todos = this.props.todos.map(t => <Todo key={t.id} todo={t} completed={this.props.completed} /> )
         return (
             <div>
-                { todos } 
+                 { todos }
             </div>
         )
     }

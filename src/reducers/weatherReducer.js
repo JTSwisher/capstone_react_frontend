@@ -7,7 +7,7 @@ const weatherReducer = (state= {weatherForecast: [], location: '', requesting: f
         case "FETCHING_WEATHER_FORECAST":
             return {...state, weatherForecast: [], requesting: true}
         case "WEATHER_FORECAST_RECEIVED":
-            return {...state, weatherForecast: [].concat(action.weather), requesting: false}
+            return {...state, weatherForecast: action.weather, requesting: false}
         default: 
             return state;
     }

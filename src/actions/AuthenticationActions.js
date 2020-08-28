@@ -25,7 +25,7 @@ export const authenticate = (user) => {
             }
         })
         .catch((error) => {
-            dispatch({type:"AUTHENTICATION_ERROR", error})
+            console.log(error)
             localStorage.clear()
         })
     }

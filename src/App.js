@@ -10,7 +10,7 @@ import HomeContainer from './containers/HomeContainer';
 
 function App() {
 
-  function isLoggedIn() { //checks logged in status of user, used to prevent access to home page without beign logged in.
+  function isLoggedIn() { //checks logged in status of user, used to prevent access to home page without being logged in.
     return ( localStorage.token ? true : false )
   }
 

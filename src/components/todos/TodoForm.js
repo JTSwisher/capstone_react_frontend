@@ -7,7 +7,8 @@ class TodoForm extends Component {
 
     state = {
         body: '',
-        user_id: localStorage.user
+        user_id: localStorage.user,
+        date: new Date()
     }
 
     handleChange = event => {
@@ -19,7 +20,9 @@ class TodoForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
+        console.log('a')
         this.props.createTodo(this.state, localStorage.user)
+        console.log('g')
         this.setState({
             body: ''
         })

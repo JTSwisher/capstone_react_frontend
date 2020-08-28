@@ -5,8 +5,9 @@ import CardColumns from 'react-bootstrap/CardColumns';
 class DisplayArticles extends Component {
 
     render() {
-        
-        const articles = this.props.articles.map((article, idx) => <Article key={idx} article={article} />)
+        let filteredArticles = this.props.query !== "" ? this.props.articles.filter(a => a.title.toLowerCase().includes(this.props.query.toLowerCase()) ) : this.props.articles
+
+        const articles = filteredArticles.map((article, idx) => <Article key={idx} article={article} />)
         return (
             <div style={{ marginTop: "10px"}}>
                 <CardColumns >
@@ -18,3 +19,5 @@ class DisplayArticles extends Component {
 }
 
 export default DisplayArticles;
+
+//

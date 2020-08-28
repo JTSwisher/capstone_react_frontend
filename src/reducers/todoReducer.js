@@ -5,7 +5,7 @@ const todoReducer = (state= {todos: [], requesting: false}, action) => {
         case "TODO_CREATED": // return  updated todos after successfully persisting new todo to DB
             return {...state, todos: [...state.todos, action.todo], requesting: false}
         case "FETCHING_TODOS":
-            return {...state, todos: [...state.todos], requesting: true}
+            return {...state, todos: [], requesting: true}
         case "TODOS_RECEIVED": //return todos after successful fetch request
             return {...state, todos: [...state.todos].concat(action.todos), requesting: false}
         case "DELETING_TODO":

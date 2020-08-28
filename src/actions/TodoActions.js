@@ -1,6 +1,8 @@
 //POST request to persist newly created todo to DB an associate with userId
 export const createTodo = (todo, userId) => {
+    console.log('b')
     return (dispatch) => {
+        console.log('c')
         dispatch({type: "CREATING_TODO" });
         fetch(`http://localhost:3001/users/${userId}/todos`, {
             method: "POST",
@@ -12,9 +14,12 @@ export const createTodo = (todo, userId) => {
         })
         .then(response => response.json())
         .then(todo => {
+            console.log('d')
             dispatch({type: "TODO_CREATED", todo});
         })
+        console.log('e')
     }
+    console.log('f')
 };
 
 // GET request to retrieve all todos associated with passed in userId

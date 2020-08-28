@@ -6,10 +6,22 @@ import { getNews } from '../actions/NewsActions'
 
 class NewsContainer extends Component {
 
+    state = {
+        query: "",
+    }
+
     // on HomContainer render NewsContainer mounts, fetch news data with default category
     componentDidMount() {
         this.props.get("general")
     }
+
+    onNewsSearchFormChange = event => {
+        const {name, value} = event.target;
+        this.setState({
+            [name]: value
+        })
+    }
+
 
     render() {
         const containerStyle = {
@@ -28,8 +40,8 @@ class NewsContainer extends Component {
         return (
             <div style={ containerStyle }>
                 <h4>News Feed</h4>
-                <NewsForm fetchNews={this.props.get} />
-                <DisplayArticles articles={this.props.articles} />
+                <NewsForm fetchNews={this.props.get} articles={this.props.articles} changeCallback={this.onNewsSearchFormChange} queryState={this.state.query}/>
+                <DisplayArticles articles={this.props.articles} query={this.state.query} />
             </div>
         )
     }
